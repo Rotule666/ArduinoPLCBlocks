@@ -1,12 +1,8 @@
-
 #ifndef ARDUINOPLCBLOCKS_H
 #define ARDUINOPLCBLOCKS_H
 
 #include <stdint.h>
 #include <arduino.h>
-
-
-
 
 class TON{
 
