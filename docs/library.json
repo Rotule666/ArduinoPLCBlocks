@@ -1,0 +1,13 @@
+ {
+  "name": "ArduinoPLCBlocks",
+  "keywords": "PLC, function blocks",
+  "description": "Arduino Library for function blocs commonly used in inductial PLC",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Rotule666/ArduinoPLCBlocks"
+  },
+  "version": "0.1",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
