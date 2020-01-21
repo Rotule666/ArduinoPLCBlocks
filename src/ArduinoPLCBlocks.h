@@ -1,18 +1,14 @@
-
 #ifndef ARDUINOPLCBLOCKS_H
 #define ARDUINOPLCBLOCKS_H
 
 #include <stdint.h>
 #include <arduino.h>
 
-
-
-
 class TON{
 
     public:
 
-    TON(uint64_t PresetTime);
+    TON(uint32_t PresetTime);
 
     void exec();
 
@@ -27,22 +23,22 @@ class TON{
     bool m_IN;		// Input
     bool m_Q;			// Output
 
-	uint64_t m_PT;	// Preset Time in mS
+	uint32_t m_PT;	// Preset Time in mS
 	bool m_RESET; 	// Reset Command
 
-	uint64_t m_ET;	// Elapsed Time in mS
+	uint32_t m_ET;	// Elapsed Time in mS
 
 	bool m_M;		    // Memory
 
-	uint64_t m_StartTime;	    //
-	uint64_t m_ActualTime;	//
+	uint32_t m_StartTime;	    //
+	uint32_t m_ActualTime;	//
 };
 
 class TOF{
 
     public:
  
-    TOF(uint64_t PresetTime);
+    TOF(uint32_t PresetTime);
 
     void exec();
 
@@ -57,17 +53,17 @@ class TOF{
     bool m_IN;		// Input
     bool m_Q;			// Output
 
-	uint64_t m_PT;	// Preset Time in mS
+	uint32_t m_PT;	// Preset Time in mS
 	bool m_RESET; 	// Reset Command
 
 	
-	uint64_t m_ET;	// Elapsed Time in mS
+	uint32_t m_ET;	// Elapsed Time in mS
 
 	bool m_M;		    // Memory
     bool m_TI;        // Timer Input
 
-	uint64_t m_StartTime;	    //
-	uint64_t m_ActualTime;	//
+	uint32_t m_StartTime;	    //
+	uint32_t m_ActualTime;	//
     
 };
 
@@ -123,7 +119,7 @@ class SR_BLOC{
 class FLASHER{
     public:
 
-    FLASHER(uint64_t OnTime, uint64_t OffTime);
+    FLASHER(uint32_t OnTime, uint32_t OffTime);
     void exec();
     bool Q();
     void IN(bool in);
@@ -144,7 +140,7 @@ class FLASH_COUNTER{
 
     public:
 
-    FLASH_COUNTER(uint64_t Time_ON, uint64_t Time_Pause, uint64_t Time_OFF);
+    FLASH_COUNTER(uint32_t Time_ON, uint32_t Time_Pause, uint32_t Time_OFF);
     void exec();
     void start();
     bool cplt();
