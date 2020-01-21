@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <arduino.h>
 
-TON::TON(uint64_t PresetTime)
+TON::TON(uint32_t PresetTime)
 {
     this->m_ActualTime = 0;
     this->m_ET = 0;
@@ -76,7 +76,7 @@ void TON::exec()
     }
 }
 
-TOF::TOF(uint64_t PresetTime)
+TOF::TOF(uint32_t PresetTime)
 {
     this->m_ActualTime = 0;
     this->m_ET = 0;
@@ -214,7 +214,7 @@ void SR_BLOC::reset(){
 }
 
 //FLASHER
-FLASHER::FLASHER(uint64_t OnTime, uint64_t OffTime):TimerOn(OnTime),TimerOff(OffTime){
+FLASHER::FLASHER(uint32_t OnTime, uint32_t OffTime):TimerOn(OnTime),TimerOff(OffTime){
     this->m_Q=false;
     this->m_IN=false;
 
@@ -259,7 +259,7 @@ void FLASHER::IN(bool in){
 
 //CODE_FLASHER
 
-FLASH_COUNTER::FLASH_COUNTER(uint64_t Time_ON, uint64_t Time_Pause, uint64_t Time_OFF):m_pause_timer(Time_Pause), m_led_on_timer(Time_ON),m_led_off_timer(Time_OFF)
+FLASH_COUNTER::FLASH_COUNTER(uint32_t Time_ON, uint32_t Time_Pause, uint32_t Time_OFF):m_pause_timer(Time_Pause), m_led_on_timer(Time_ON),m_led_off_timer(Time_OFF)
 {
     this->m_sfc_step=0;
     this->m_flash_complete=false;
