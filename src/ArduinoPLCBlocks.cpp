@@ -3,7 +3,7 @@
 #define G_MAX_MS_COUNTER 0xffffffff
 
 #include <stdint.h>
-#include <arduino.h>
+#include <Arduino.h>
 
 TON::TON(uint32_t PresetTime)
 {
