@@ -76,6 +76,10 @@ void TON::exec()
     }
 }
 
+void TON::updatePT(uint32_t PresetTime){
+    this->m_PT=PresetTime;
+}
+
 TOF::TOF(uint32_t PresetTime)
 {
     this->m_ActualTime = 0;
@@ -149,6 +153,10 @@ void TOF::exec()
     {
         this->m_Q = 0;
     }
+}
+
+void TOF::updatePT(uint32_t PresetTime){
+    this->m_PT=PresetTime;
 }
 
 R_TRIG::R_TRIG()
@@ -253,6 +261,11 @@ bool FLASHER::Q(){
 
 void FLASHER::IN(bool in){
     this->m_IN=in;
+}
+
+void FLASHER::updateTime(uint32_t OnTime, uint32_t OffTime){
+    this->TimerOn.updatePT(OnTime);
+    this->TimerOff.updatePT(OffTime);
 }
 
 //FIFO

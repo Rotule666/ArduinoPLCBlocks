@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/Rotule666/ArduinoPLCBlocks"
   },
-  "version": "0.2",
+  "version": "0.3",
   "frameworks": "arduino",
   "platforms": "*"
 }

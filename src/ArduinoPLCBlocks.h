@@ -18,6 +18,8 @@ class TON{
 
     void RESET();
 
+    void updatePT(uint32_t PresetTime);
+
     private:
 
     bool m_IN;		// Input
@@ -47,6 +49,8 @@ class TOF{
     bool Q();
 
     void RESET();
+
+    void updatePT(uint32_t PresetTime);
 
     private:
 
@@ -123,6 +127,7 @@ class FLASHER{
     void exec();
     bool Q();
     void IN(bool in);
+    void updateTime(uint32_t OnTime, uint32_t OffTime);
 
     private:
     bool m_Q;
